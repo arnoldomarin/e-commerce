@@ -1,6 +1,6 @@
 'use client';
 
-import { Header } from 'next/dist/lib/load-custom-routes'
+import { Header } from '../../../../payload/payload-types';
 import React from 'react'
 import { Gutter } from '../../Gutter'
 import Link from 'next/link'
@@ -8,7 +8,7 @@ import Image from 'next/image'
 
 import classes from './index.module.scss'
 import { HeaderNav } from '../Nav'
-import MobileNav from '../MobileNav'
+// import MobileNav from '../MobileNav'
 import { noHeaderFooterUrls } from '../../../constants/indext'
 import { usePathname } from 'next/navigation'
 
@@ -22,7 +22,7 @@ const HeaderComponent = ({ header }: { header: Header}) => {
             </Link>
 
             <HeaderNav header={header}/>
-            <MobileNav header={header} />
+            {/* <MobileNav header={header} /> */}
         </Gutter>
     </nav>
   )

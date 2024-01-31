@@ -1,16 +1,12 @@
-{
-  /* eslint-disable @next/next/no-img-element */
-}
-
 import React from 'react'
 import Link from 'next/link'
 
-import { Header } from '../../../payload/globals/Header'
+import { Header as HeaderComponentType } from '../../../payload/payload-types'
 import { fetchHeader } from '../../_api/fetchGlobals'
 import HeaderComponent from './HeaderComponent'
 
 export async function Header() {
-  let header: Header | null = null
+  let header: HeaderComponentType | null = null
 
   try {
     header = await fetchHeader()
@@ -20,7 +16,7 @@ export async function Header() {
 
   return (
     <>
-      <HeaderComponent header={header}/>
+      <HeaderComponent header={header} />
     </>
   )
 }
